@@ -1,0 +1,101 @@
+{
+  "relay": ["Ohio (US East)","Singapore (Asia Pacific)"],
+  "connector": [
+    {
+      "user": "ubuntu",
+      "host": "3.137.80.248",
+      "port": 22,
+      "pem": "src/test/resources/pem/Automation.pem"
+    },
+    {
+      "user": "ubuntu",
+      "host": "18.119.32.252",
+      "port": 22,
+      "pem": "src/test/resources/pem/Automation.pem"
+    }
+  ],
+  "service": {
+    "webApp": [{
+      "name": "charlie-https",
+      "url": "svc-charlie.qa-test.io",
+      "protocol": "https"
+    },
+      {
+        "name": "charlie-http",
+        "url": "10.0.112.26:80",
+        "protocol": "http"
+      }
+    ],
+    "remoteDesktop": [
+      {
+        "name": "charlie-rdp",
+        "url": "10.0.112.132",
+        "port": "3389",
+        "protocol": "rdp"
+      },
+      {
+        "name": "charlie-vnc",
+        "url": "10.0.112.214",
+        "port": "5901",
+        "protocol": "vnc"
+      }
+    ],
+    "secureShell": [    {
+      "name": "charlie-ssh",
+      "url": "10.0.112.26",
+      "port": "22",
+      "protocol": "ssh"
+    }
+    ]},
+  "tenant": {
+    "email": "atahir@extremenetworks.com",
+    "password": "Aerohive123"
+  },
+  "tenantTwo": {
+    "email": "sameer.khawaja@emumba.com",
+    "password": "Aerohive123"
+  },
+  "user": {
+    "google": [],
+    "microsoft": [],
+    "local": [{"email": "demouser39@gmail.com","password": "Ztna@123"}]
+  },
+  "splunk": {
+    "host": "splunk-server-zta.extremecloudztna.com",
+    "port": "8088",
+    "protocol": "https",
+    "token": "36f2806e-ce9a-4f7d-ae14-b065fdb42439"
+  },
+  "awsIntegration": [
+    {
+      "awsAccountId": "149049417381"
+    },
+    {
+      "awsAccountId": "537054089900"
+    }
+  ],
+  "azureIntegration": [
+    {
+      "azureSubscriptionId": "ffcc8cf6-d484-4772-ac28-8d26b2728031"
+    },
+    {
+      "azureSubscriptionId": "e893bfba-f36d-482f-bfb8-9a7a7e9e43dd"
+    }
+  ],
+  "azureIntegrationCredentials": {
+    "tenantId":"b790f6ff-34c5-4074-bc2e-2f6be41e5870",
+    "ApplicationClientId":"01a81a6d-5911-44c1-bee1-2c50164b72c5",
+    "ObjectId":"ca93b951-7eff-4c04-a654-8b0e0a495cce",
+    "ApplicationClientSecret":"XMW8Q~Lct8_m4FwkM3~GTQtvi4gAYKjxafDjIazT"
+  },
+  "gcpIntegration": [
+    {
+      "gcpProjectId": "ztna-automation-project-1",
+      "serviceAccountKeyFilePath": "src/test/resources/test_data/web/multicloud_integrations/ztna-automation-project-1.json"
+    },
+    {
+      "gcpProjectId": "ztna-automation-project-2",
+      "serviceAccountKeyFilePath": "src/test/resources/test_data/web/multicloud_integrations/ztna-automation-project-2.json"
+    }
+  ]
+}
